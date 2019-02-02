@@ -1,0 +1,13 @@
+<h1>Heroes list!</h1>
+
+#if ($hero)
+  <ul>
+    #foreach ($hero in $hero)
+      <li><a href="/tasks/$task.getId()">$task.getDescription()</a></li>
+    #end
+  </ul>
+#else
+  <p>No heroes!</p>
+#end
+
+<a href="/hero/new">Add New Hero</a>
