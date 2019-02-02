@@ -11,57 +11,57 @@ public class SquadTest {
 
   @Test
   public void getName_squadInstantiatesWithName_Super() {
-    Squad testCategory = new Squad("Super");
+    Squad testSquad = new Squad("Super");
     assertEquals("Super", testSquad.getName());
   }
 
   @Test
   public void all_returnsAllInstancesOfSquad_true() {
     Squad firstSquad = new Squad("Super");
-    Squad secondSquad = new Category("Villain");
+    Squad secondSquad = new Squad("Villain");
     assertEquals(true, Squad.all().contains(firstSquad));
     assertEquals(true, Squad.all().contains(secondSquad));
   }
 
    @Test
   public void clear_emptiesAllSquadsFromList_0() {
-    Squad testSquad = new Category("Home");
-    Category.clear();
-    assertEquals(Category.all().size(), 0);
+    Squad testSquad = new Squad("Super");
+    Squad.clear();
+    assertEquals(Squad.all().size(), 0);
   }
 
    @Test
-  public void getId_categoriesInstantiateWithAnId_1() {
-    Category testCategory = new Category("Home");
-    assertEquals(1, testCategory.getId());
+  public void getId_squadInstantiateWithAnId_1() {
+    Squad testSquad = new Squad("Super");
+    assertEquals(1, testSquad.getId());
   }
 
   @Test
-  public void find_returnsCategoryWithSameId_secondCategory() {
-    Category.clear();
-    Category firstCategory = new Category("Home");
-    Category secondCategory = new Category("Work");
-    assertEquals(Category.find(secondCategory.getId()), secondCategory);
+  public void find_returnsSquadWithSameId_secondSquad() {
+    Squad.clear();
+    Squad firstSquad = new Squad("Super");
+    Squad secondSquad = new Squad("Villain");
+    assertEquals(Squad.find(secondSquad.getId()), secondSquad);
   }
 
   @Test
-public void getTasks_initiallyReturnsEmptyList_ArrayList() {
-  Category.clear();
-  Category testCategory = new Category("Home");
-  assertEquals(0, testCategory.getTasks().size());
+public void getHeroes_initiallyReturnsEmptyList_ArrayList() {
+  Squad.clear();
+  Squad testSquad = new Squad("Home");
+  assertEquals(0, testSquad.getHeroes().size());
 }
 
 @Test
 public void addTask_addsTaskToList_true() {
-  Category testCategory = new Category("Home");
-  Task testTask = new Task("Mow the lawn");
-  testCategory.addTask(testTask);
-  assertTrue(testCategory.getTasks().contains(testTask));
+  Squad testSquad = new Squad("Super");
+  Hero testHero = new Hero("Superman");
+  testSquad.addHero(testHero);
+  assertTrue(testSquad.getHeroes().contains(testHero));
 }
 
  @Test
-  public void find_returnsNullWhenNoTaskFound_null() {
-    assertTrue(Category.find(999) == null);
+  public void find_returnsNullWhenNoHeroFound_null() {
+    assertTrue(Squad.find(999) == null);
   }
 
 
