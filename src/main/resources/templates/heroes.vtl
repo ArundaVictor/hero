@@ -1,11 +1,12 @@
 <h1>Heroes list!</h1>
-
 #if ($heroes)
-  <ul>
-    #foreach ($hero in $heroes)
-      <li>$hero.getDescription()</li>
-    #end
-  </ul>
+ <ul>
+   #foreach ($hero in $heroes)
+     <li><a href="/heroes/$hero.getId()">$hero.getDescription()</a></li>
+   #end
+ </ul>
 #else
-  <p>No heroes added!</p>
+ <p>No heroes added!</p>
 #end
+<a href="/heroes/new">Add New Hero</a>
+
