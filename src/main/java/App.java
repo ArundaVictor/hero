@@ -28,25 +28,25 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-      get("hero/new", (request, response) -> {
+      get("heroes/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/hero-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-       get("/hero", (request, response) -> {
+       get("/heroes", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      // model.put("tasks", Task.all());
-      model.put("template", "templates/hero.vtl");
+      // model.put("hero", Hero.all());
+      model.put("template", "templates/heroes.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-      post("/hero", (request, response) -> {
+      post("/heroes", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
 
       String description = request.queryParams("description");
       Hero newHero = new Hero(description);
-      request.session().attribute("hero", newHero);
+      // request.session().attribute("hero", newHero);
 
       model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
