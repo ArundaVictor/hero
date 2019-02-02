@@ -8,11 +8,21 @@ public class Hero {
   private LocalDateTime mCreatedAt;
 
 
-   public Task(String description) {
+   public Hero(String description) {
     mDescription = description;
     mCompleted = false;
     mCreatedAt = LocalDateTime.now();
 }
+    public String getDescription() {
+    return mDescription;
+  }
 
+  public boolean isCompleted() {
+    return mCompleted;
+  }
+
+  public LocalDateTime getCreatedAt() {
+    return mCreatedAt;
+  }
 
 }
