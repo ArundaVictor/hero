@@ -28,6 +28,17 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+      post("/hero", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+
+      String description = request.queryParams("description");
+      Hero newHero = new Hero(description);
+      request.session().attribute("hero", newHero);
+
+      model.put("template", "templates/success.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
 
 	}
 }
