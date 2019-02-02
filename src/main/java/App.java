@@ -34,6 +34,13 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+       get("/hero", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      // model.put("tasks", Task.all());
+      model.put("template", "templates/hero.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
       post("/hero", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
 
@@ -44,6 +51,7 @@ public class App {
       model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
 
 
 	}
