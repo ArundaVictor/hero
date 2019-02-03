@@ -2,7 +2,11 @@
 #if ($hero)
  <ul>
    #foreach ($hero in $hero)
-     <li><a href="/heroes/$hero.getId()">$hero.getDescription()</a></li>
+     <li><a href="/heroes/$hero.getId()">$hero.getDescription()</a>
+     <a href="/heroes/$hero.getId()">$hero.getAge()</a>
+     <a href="/heroes/$hero.getId()">$hero.getPower()</a>
+     <a href="/heroes/$hero.getId()">$hero.getWeakness()</a>
+   </li>
    #end
  </ul>
 #else
