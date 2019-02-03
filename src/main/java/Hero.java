@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Hero {
 	private String mDescription;
-  private int mAge;
+  private String mAge;
   private String mPower;
   private String mWeakness;
   private boolean mCompleted;
@@ -13,7 +13,7 @@ public class Hero {
    private int mId;
 
 
-   public Hero(String description, int age, String power, String weakness) {
+   public Hero(String description, String age, String power, String weakness) {
     mDescription = description;
     mAge = age;
     mPower = power;
@@ -23,21 +23,24 @@ public class Hero {
     instances.add(this);
     mId = instances.size();
 }
+
+   
     public String getDescription() {
     return mDescription;
   }
+      
+     public String getAge(){
+      return mAge;
+   }
 
-  public String getAge() {
-    return mAge;
-  }
+   public String getPower(){
+      return mPower;
+   }
 
-  public String getPower() {
-    return mPower;
-  }
-
-  public String getWeakness() {
-    return mWeakness;
-  }
+   public String getWeakness(){
+      return mWeakness;
+   }
+ 
 
   public boolean isCompleted() {
     return mCompleted;
