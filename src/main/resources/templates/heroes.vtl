@@ -3,9 +3,9 @@
  <ul>
    #foreach ($hero in $hero)
      <li><a href="/heroes/$hero.getId()">$hero.getDescription()</a>
-     <a href="/heroes/$hero.getId()">$hero.getAge()</a>
-     <a href="/heroes/$hero.getId()">$hero.getPower()</a>
-     <a href="/heroes/$hero.getId()">$hero.getWeakness()</a>
+     <p>Age: $hero.getAge()</p>
+     <p>Power: $hero.getPower()</p>
+     <p>Weakness: $hero.getWeakness()</p>
    </li>
    #end
  </ul>

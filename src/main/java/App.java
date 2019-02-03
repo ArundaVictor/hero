@@ -44,8 +44,12 @@ public class App {
       post("/heroes", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
 
-      String description = request.queryParams("description");
-      Hero newHero = new Hero(description);
+      
+        String description = request.queryParams("description");
+        String age = request.queryParams("age");
+        String power = request.queryParams("power");
+        String weakness = request.queryParams("weakness");
+        Hero newHero = new Hero(description,age,power,weakness);
       
       // request.session().attribute("hero", newHero);
 
@@ -104,8 +108,13 @@ public class App {
 
   Squad squad = Squad.find(Integer.parseInt(request.queryParams("squadId")));
 
-  String description = request.queryParams("description");
-  Hero newHero = new Hero(description);
+ 
+        String description = request.queryParams("description");
+        String age = request.queryParams("age");
+        String power = request.queryParams("power");
+        String weakness = request.queryParams("weakness");
+        Hero newHero = new Hero(description,age,power,weakness);
+      
   
   squad.addHero(newHero);
 
