@@ -46,6 +46,12 @@ public class App {
 
       String description = request.queryParams("description");
       Hero newHero = new Hero(description);
+      int age = request.queryParams("age");
+      Hero newHero = new Hero(age);
+      String power = request.queryParams("power");
+      Hero newHero = new Hero(power);
+      String weakness = request.queryParams("weakness");
+      Hero newHero = new Hero(weakness);
       // request.session().attribute("hero", newHero);
 
       model.put("template", "templates/success.vtl");
@@ -105,6 +111,12 @@ public class App {
 
   String description = request.queryParams("description");
   Hero newHero = new Hero(description);
+  int age = request.queryParams("age");
+      Hero newHero = new Hero(age);
+      String power = request.queryParams("power");
+      Hero newHero = new Hero(power);
+      String weakness = request.queryParams("weakness");
+      Hero newHero = new Hero(weakness);
 
   squad.addHero(newHero);
 
