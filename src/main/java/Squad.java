@@ -11,7 +11,7 @@ public class Squad {
     mName = name;
     instances.add(this);
     mId = instances.size();
-    mHeroes = new ArrayList<Heroes>();
+    mHeroes = new ArrayList<Hero>();
   }
 
   public String getName() {
@@ -36,8 +36,8 @@ public class Squad {
     return mHeroes;
   }
 
-  public void addHero(Task hero) {
-  mHeroes.add(heroes);
+  public void addHero(Hero hero) {
+  mHeroes.add(hero);
 }
 
 public static Squad find(int id) {
