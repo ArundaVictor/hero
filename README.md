@@ -1,23 +1,24 @@
-# CEASAR CIPHER
+# HERO SQUAD
 
-This is a java application where users can encrypt a text or message.
+This is a java application where users can create their own heroes and put them in squads.
 
 #### By **Arunda Victor Oyugi**
 
 ## Description
- Caesar cipher is a shift cipher, one of the most easy and most famous encryption systems. It uses the substitution of a letter by another one further in the alphabet using a key.
+ The Hero's apllication allows users to create heroes of their own choosing using qualities such as age, strengths and weaknesses. They can put the heroes they like in one squad where they stand for a particular cause and can give them points.
 
 ## Setup/Installation Requirements
 1. Clone the repository.
 2. Navigate to the file.
 3. Open with the text editor of your choice
-4. Navigate to build/classes/main and run $ java App on your terminal
+4. Run "gradle run" to open the application on your browser.
 
 ## Behaviour driven Development (BDD)
 |#User inputs   |  #Example outputs |         
 |---------------|-------------------|
 |When it receives:               | It should return:                  |
-| User enters mesage to encrypt             | The encrypted message is displayed                 |
+| User enters hero name and attributes             | The hero is saved on the application                |
+| User creates a squad of heroes             | The squad is saved with the heroes of that squad.                |
 
 
 ## Known Bugs
@@ -32,6 +33,7 @@ This apllication was written using Java programming language.
 * Sublime text - Text editor
 * Gradle - build tool
 * Git - version control environment
+* Spark - web framework.
 
 ## Support and contact details
 In case of any questions or feedback or clarifications, you can reach me at:
