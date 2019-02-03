@@ -1,7 +1,7 @@
 <h1>Heroes list!</h1>
-#if ($heroes)
+#if ($hero)
  <ul>
-   #foreach ($hero in $heroes)
+   #foreach ($hero in $hero)
      <li><a href="/heroes/$hero.getId()">$hero.getDescription()</a></li>
    #end
  </ul>

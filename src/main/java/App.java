@@ -70,7 +70,7 @@ public class App {
   Map<String, Object> model = new HashMap<String, Object>();
   String name = request.queryParams("name");
   Squad newSquad = new Squad(name);
-  model.put("template", "templates/squad-success.vtl");
+  model.put("template", "templates/squad-sucess.vtl");
   return new ModelAndView(model, layout);
 }, new VelocityTemplateEngine());
 
