@@ -4,14 +4,20 @@ import java.util.List;
 
 public class Hero {
 	private String mDescription;
+  private int mAge;
+  private String mPower;
+  private String mWeakness;
   private boolean mCompleted;
   private LocalDateTime mCreatedAt;
    private static List<Hero> instances = new ArrayList<Hero>();
    private int mId;
 
 
-   public Hero(String description) {
+   public Hero(String description, int age, String power, String weakness) {
     mDescription = description;
+    mAge = age;
+    mPower = power;
+    mWeakness = weakness;
     mCompleted = false;
     mCreatedAt = LocalDateTime.now();
     instances.add(this);
@@ -19,6 +25,18 @@ public class Hero {
 }
     public String getDescription() {
     return mDescription;
+  }
+
+  public String getAge() {
+    return mAge;
+  }
+
+  public String getPower() {
+    return mPower;
+  }
+
+  public String getWeakness() {
+    return mWeakness;
   }
 
   public boolean isCompleted() {
